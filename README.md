@@ -3,7 +3,7 @@ My edits Here Akash
 -------------------------------------------------------------
 Once we clone to code to our local machine 
 
-git clone 
+git clone https://github.com/ghussenaiah/React_Js_TrainTracking.git
 
 npm start 
 
