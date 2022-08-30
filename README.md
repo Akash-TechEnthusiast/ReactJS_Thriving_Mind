@@ -1,3 +1,18 @@
+My edits Here Akash
+
+-------------------------------------------------------------
+Once we clone to code to our local machine 
+
+git clone https://github.com/ghussenaiah/React_Js_TrainTracking.git
+
+npm start 
+
+app will start @http://localhost:3000
+
+-------------------------------------------------------------
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
