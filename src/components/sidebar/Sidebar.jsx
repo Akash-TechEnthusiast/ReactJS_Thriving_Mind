@@ -14,13 +14,18 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
 import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
 
       <div className="top">
-        <span classname="logo">Admin</span>
+
+        <Link to="/home" style={{ textDecoration: 'none' }}>
+          <span classname="logo">Admin</span>
+        </Link>
+
       </div>
 
       <hr />
@@ -33,10 +38,15 @@ const Sidebar = () => {
             <span>DashBoard</span>
           </li>
           <p className="title">LIST</p>
-          <li>
-            <GroupIcon className="icon" />
-            <span>Users</span>
-          </li>
+
+          <Link to="/" style={{ textDecoration: 'none' }}>
+
+            <li>
+              <GroupIcon className="icon" />
+              <span>Users</span>
+            </li>
+
+          </Link>
 
           <li>
             <ProductionQuantityLimitsIcon className="icon" />
