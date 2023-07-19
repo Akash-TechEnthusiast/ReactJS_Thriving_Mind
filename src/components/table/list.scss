@@ -7,9 +7,9 @@
         .cellWrapper {
 
             display: flex;
-          
+
             align-items: center;
-        
+
 
             .image {
 
@@ -18,10 +18,10 @@
                 width: 28px;
                 height: 28px;
                 margin-right: 10px;
-             
+
             }
 
-           
+
 
         }
 
@@ -36,16 +36,19 @@
                 color: green;
                 background-color: lightgreen
             }
+
             &.Open {
 
                 color: red;
                 background-color: lightblue
             }
+
             &.Submitted {
 
                 color: red;
                 background-color: lightpink
             }
+
             &.Pending {
 
                 color: pink;

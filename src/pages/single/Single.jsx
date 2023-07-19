@@ -4,6 +4,8 @@ import Navbar from "../../components/navbar/Navbar";
 import "./single.scss";
 import DriveFolderUploadOutlined from "@mui/icons-material/DriveFolderUploadOutlined";
 const Single = () => {
+
+    
     return (
         <div className="home">
             <Sidebar />
@@ -14,7 +16,7 @@ const Single = () => {
                 </div>
                 <div className="bottom">
                     <div className="left">
-                        <img src="http://new.parulankur.com/wp-content/uploads/2021/04/baby_shoots_by_parul_and_ankur00011.jpg" alt="childImage"></img>
+                        <img src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" alt="childImage"></img>
                     </div>
                     <div className="right">
                         <form>
