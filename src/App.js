@@ -4,6 +4,9 @@ import Login from "./pages/login/Login";
 import Single from "./pages/single/Single";
 import ListView from "./pages/listview/ListView";
 
+import New from "./pages/new/New";
+
+
 import React, { useState } from 'react';
 // import React, { Component }  from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -22,7 +25,7 @@ function App() {
         <Routes>
 
           <Route path="/">
-            <Route index element={<ListView />} />
+            <Route index element={<Single />} />
             <Route path="home" element={<Home />} />
 
             <Route path="user">
