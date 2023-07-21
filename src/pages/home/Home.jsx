@@ -2,7 +2,7 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Widgets from "../../components/widgets/Widgets";
-import List from "../../components/table/List";
+import List from "../../components/list/List";
 import CircularProgress from "@mui/material/CircularProgress";
 
 import "./home.scss";

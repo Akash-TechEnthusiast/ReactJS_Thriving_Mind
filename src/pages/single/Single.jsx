@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import "./single.scss";
 import DriveFolderUploadOutlined from "@mui/icons-material/DriveFolderUploadOutlined";
 const Single = () => {
 
-    
+    const [file, setFile] = useState("");
     return (
         <div className="home">
             <Sidebar />
@@ -16,14 +16,16 @@ const Single = () => {
                 </div>
                 <div className="bottom">
                     <div className="left">
-                        <img src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" alt="childImage"></img>
+                        <img src={file ? URL.createObjectURL(file) : "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"} alt="childImage"></img>
+
+
                     </div>
                     <div className="right">
                         <form>
                             <div className="formInput">
 
                                 <lable htmlFor="fileuploadId"></lable>
-                                <input id="fileuploadId" type="file" style={{ "border-bottom": "none" }}></input>
+                                <input id="fileuploadId" onChange={e => setFile(e.target.files[0])} type="file" style={{ "border-bottom": "none" }}></input>
 
                             </div>
                             <div className="formInput">
