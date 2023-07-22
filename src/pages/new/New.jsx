@@ -28,22 +28,31 @@ const New = () => {
                                 <input id="fileuploadId" onChange={e => setFile(e.target.files[0])} type="file" style={{ "border-bottom": "none" }}></input>
 
                             </div>
-                            <div className="formInput">
-                                <lable>username</lable>
-                                <input type="text" placeholder="Akash"></input>
-                            </div>
-                            <div className="formInput">
-                                <lable>password</lable>
-                                <input type="password" placeholder="Akash"></input>
-                            </div>
+                          
                             <div className="formInput">
                                 <lable>address</lable>
                                 <input type="text" placeholder="Akash"></input>
                             </div>
+
+
+                            <div className="formInput">
+                                <lable>username</lable>
+                                <input type="text" placeholder="Akash"></input>
+                            </div>
+
+
+                            <div className="formInput">
+                                <lable>password</lable>
+                                <input type="password" placeholder="Akash"></input>
+                            </div>
+
+
                             <div className="formInput">
                                 <lable>email</lable>
                                 <input type="email" placeholder="Akash"></input>
                             </div>
+
+                            
                             <div className="formInput">
                                 <lable>phoneno</lable>
                                 <input type="number" placeholder="Akash"></input>

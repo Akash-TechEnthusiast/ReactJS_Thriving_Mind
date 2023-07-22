@@ -23,7 +23,7 @@ const Sidebar = () => {
       <div className="top">
 
         <Link to="/home" style={{ textDecoration: 'none' }}>
-          <span classname="logo">Admin</span>
+          <span className="logo">Home</span>
         </Link>
 
       </div>
@@ -39,7 +39,7 @@ const Sidebar = () => {
           </li>
           <p className="title">LIST</p>
 
-          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Link to="/user" style={{ textDecoration: 'none' }}>
 
             <li>
               <GroupIcon className="icon" />
@@ -108,7 +108,8 @@ const Sidebar = () => {
       <div className="bottom">
         <div className="colourOption"></div>
         <div className="colourOption"></div>
-        <div className="colourOption"></div>
+      
+       
       </div>
 
 

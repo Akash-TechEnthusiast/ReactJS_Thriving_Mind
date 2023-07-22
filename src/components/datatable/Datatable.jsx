@@ -3,7 +3,7 @@ import * as React from 'react';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
 import {userRows,userColumns} from "../../dataTableSource";
-
+import { Link } from 'react-router-dom';
 
 const actionColumn = [
     { field: 'action', headerName: 'Action', width: 230,
@@ -11,8 +11,13 @@ const actionColumn = [
 
         return (
             <div className="cellAction">
+
+
+        <Link to="/user/test" style={{ textDecoration: 'none' }}>
                <div className="viewButton">View
                </div>
+        </Link>
+              
                <div className="deleteButton">Delete
                </div>
             </div>
@@ -71,8 +76,14 @@ const Datatable = () => {
     return (
         <div className="datatable">
 
+            <div className="datatableTitle"> Add New User
+            <Link to="/user/new" className="link" >
+            Add New 
+        </Link>
+            </div>
 
-            <DataGrid
+
+            <DataGrid className="datagrid"
                 rows={userRows}
                 columns={userColumns.concat(actionColumn)}
                 initialState={{

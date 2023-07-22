@@ -6,6 +6,7 @@ import ListView from "./pages/listview/ListView";
 
 import New from "./pages/new/New";
 
+import "./styles/dark.scss"
 
 import React, { useState } from 'react';
 // import React, { Component }  from 'react';
@@ -18,21 +19,21 @@ function App() {
    }*/
 
   return (
-    <div className="App">
+    <div className="app dark">
 
 
       <BrowserRouter>
         <Routes>
 
           <Route path="/">
-            <Route index element={<Single />} />
+            <Route index element={<ListView />} />
             <Route path="home" element={<Home />} />
 
             <Route path="user">
 
-              <Route index element={<Login />} />
-              <Route path=":userId" element={<Login />} />
-              <Route path="new" element={<NoPage />} />
+              <Route index element={<ListView />} />
+              <Route path=":userId" element={<Single />} />
+              <Route path="new" element={<New />} />
 
             </Route>
 

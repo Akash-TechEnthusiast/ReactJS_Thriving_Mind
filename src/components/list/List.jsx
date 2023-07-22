@@ -58,22 +58,22 @@ const List = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Dessert</TableCell>
-              <TableCell>Image&nbsp;Url</TableCell>
-              <TableCell>Calories</TableCell>
-              <TableCell>Fat&nbsp;(g)</TableCell>
-              <TableCell>Carbs&nbsp;(g)</TableCell>
-              <TableCell>Protein&nbsp;(g)</TableCell>
-              <TableCell>Status</TableCell>
+              <TableCell className="tableCell">Dessert</TableCell>
+              <TableCell className="tableCell">Image&nbsp;Url</TableCell>
+              <TableCell className="tableCell">Calories</TableCell>
+              <TableCell className="tableCell">Fat&nbsp;(g)</TableCell>
+              <TableCell className="tableCell">Carbs&nbsp;(g)</TableCell>
+              <TableCell className="tableCell">Protein&nbsp;(g)</TableCell>
+              <TableCell className="tableCell">Status</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.name}>
 
-                <TableCell>{row.name}</TableCell>
+                <TableCell className="tableCell">{row.name}</TableCell>
 
-                <TableCell>
+                <TableCell className="tableCell">
                   {" "}
                   <div className="cellWrapper">
                     <img src={row.imgurl} alt="W3Schools.com" className="image"/>
@@ -81,11 +81,11 @@ const List = () => {
                   </div>
                 </TableCell>
 
-                <TableCell>{row.calories}</TableCell>
-                <TableCell>{row.fat}</TableCell>
-                <TableCell>{row.carbs}</TableCell>
-                <TableCell>{row.protein}</TableCell>
-                <TableCell>
+                <TableCell className="tableCell">{row.calories}</TableCell>
+                <TableCell className="tableCell">{row.fat}</TableCell>
+                <TableCell className="tableCell">{row.carbs}</TableCell>
+                <TableCell className="tableCell">{row.protein}</TableCell>
+                <TableCell className="tableCell">
                   <span className={`status ${row.status}`}>{row.status}</span>
                 </TableCell>
               </TableRow>
