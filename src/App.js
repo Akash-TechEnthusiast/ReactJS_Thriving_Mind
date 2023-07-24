@@ -14,12 +14,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [token, setToken] = useState();
 
+  const [dark, setDark] = useState(true);
+
   /* if (!token) {
      return <Login setToken={setToken} />
    }*/
 
   return (
-    <div className="app dark">
+    <div className={dark? "app dark":"app"}>
 
 
       <BrowserRouter>

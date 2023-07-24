@@ -1,11 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import "./new.scss";
 import DriveFolderUploadOutlined from "@mui/icons-material/DriveFolderUploadOutlined";
+import axios from 'axios';
 const New = () => {
 
-    const [file, setFile] = useState("");
+    const [file, setFile] = useState(null);
+
+
+
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const handleFileChange = (e) => {
+      setSelectedFile(e.target.files[0]);
+
+      console.log('Selected file:', e.target.files[0]);
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+  
+      axios.post('http://localhost:3000/api/upload', formData,{
+        headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+      })
+        .then((response) => {
+          console.log('File uploaded successfully!', response);
+        })
+        .catch((error) => {
+          console.error('Error uploading file:', error);
+        });
+    };
+  
+    const handleFileUpload = () => {
+     
+    };
+
     return (
         <div className="home">
             <Sidebar />
@@ -16,16 +46,16 @@ const New = () => {
                 </div>
                 <div className="bottom">
                     <div className="left">
-                        <img src={file ? URL.createObjectURL(file) : "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"} alt="childImage"></img>
+                        <img src={selectedFile ? URL.createObjectURL(selectedFile) : "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"} alt="childImage" ></img>
 
 
                     </div>
                     <div className="right">
-                        <form>
+                        <form autocomplete="off">
                             <div className="formInput">
 
                                 <lable htmlFor="fileuploadId"></lable>
-                                <input id="fileuploadId" onChange={e => setFile(e.target.files[0])} type="file" style={{ "border-bottom": "none" }}></input>
+                                <input id="fileuploadId" onChange={handleFileChange} type="file" style={{ "border-bottom": "none" }}></input>
 
                             </div>
                           
@@ -43,7 +73,7 @@ const New = () => {
 
                             <div className="formInput">
                                 <lable>password</lable>
-                                <input type="password" placeholder="Akash"></input>
+                                <input type="text" placeholder="Akash"></input>
                             </div>
 
 
