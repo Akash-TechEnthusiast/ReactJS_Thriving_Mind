@@ -3,6 +3,7 @@ import NoPage from "./pages/nopage/NoPage";
 import Login from "./pages/login/Login";
 import Single from "./pages/single/Single";
 import ListView from "./pages/listview/ListView";
+import Payment from "./pages/payment/Payment";
 
 import New from "./pages/new/New";
 
@@ -14,7 +15,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [token, setToken] = useState();
 
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   /* if (!token) {
      return <Login setToken={setToken} />
@@ -36,6 +37,11 @@ function App() {
               <Route index element={<ListView />} />
               <Route path=":userId" element={<Single />} />
               <Route path="new" element={<New />} />
+              <Route path="payment" element={<Payment />} />
+
+              
+
+              
 
             </Route>
 

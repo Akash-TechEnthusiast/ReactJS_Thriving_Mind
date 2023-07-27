@@ -14,6 +14,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
 import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
+import PaymentIcon from '@mui/icons-material/Payment'; 
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -96,6 +97,13 @@ const Sidebar = () => {
             <AccountCircleIcon className="icon" />
             <span>Profile</span>
           </li>
+          <Link to="/user/payment" style={{ textDecoration: 'none' }}>
+          <li>
+            <PaymentIcon className="icon" />
+            <span>Payment</span>
+          </li>
+          </Link>
+
 
           <li>
             <LogoutIcon className="icon" />
